@@ -64,5 +64,15 @@ export default {
     axios: {},
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
-    build: {},
+    build: {
+        postcss: {
+            plugins: {
+                'postcss-easy-import': {
+                    prefix: '_',
+                    extensions: ['.css', '.scss'],
+                },
+                'postcss-nested': {},
+            },
+        },
+    },
 }
