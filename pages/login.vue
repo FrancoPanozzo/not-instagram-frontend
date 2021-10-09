@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="container">
         <h1>Welcome to Peroniagram</h1>
         <button class="btn" @click="login">Log in</button>
     </div>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper {
+.container {
     @apply flex flex-col items-center justify-center w-full;
 }
 

@@ -11,21 +11,27 @@ export default {
 </script>
 
 <template>
-    <div :class="{ 'dark-mode': true, 'app-outer-wrap': true }">
+    <div :class="{ 'dark-mode': true, app: true }">
         <the-navbar />
-        <div class="app-inner-wrap">
-            <nuxt />
+        <div class="outer-container">
+            <div class="inner-container">
+                <nuxt />
+            </div>
         </div>
         <the-footer />
     </div>
 </template>
 
 <style scoped lang="scss">
-.app-outer-wrap {
+.app {
     @apply flex flex-col min-h-screen;
 }
 
-.app-inner-wrap {
-    @apply flex-1;
+.outer-container {
+    @apply flex-1 p-6;
+}
+
+.inner-container {
+    @apply max-w-screen-xl  mx-auto w-full;
 }
 </style>
