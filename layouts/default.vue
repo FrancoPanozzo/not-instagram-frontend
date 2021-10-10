@@ -1,11 +1,9 @@
 <script>
 import TheNavbar from '@/components/TheNavbar'
-import TheFooter from '@/components/TheFooter'
 
 export default {
     components: {
         TheNavbar,
-        TheFooter,
     },
 }
 </script>
@@ -18,7 +16,6 @@ export default {
                 <nuxt />
             </div>
         </div>
-        <the-footer />
     </div>
 </template>
 

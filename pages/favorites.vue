@@ -3,10 +3,7 @@ export default {}
 </script>
 
 <template>
-    <div>
-        <h1>Settings</h1>
-        <t-alert :show="true">Alert</t-alert>
-    </div>
+    <div>Favorites</div>
 </template>
 
 <style scoped lang="scss"></style>

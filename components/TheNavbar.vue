@@ -1,8 +1,14 @@
 <script>
-import { CogIcon } from '@vue-hero-icons/solid'
+import { HomeIcon, ChatAltIcon, StarIcon } from '@vue-hero-icons/solid'
+
+import DropwdownMenu from '@/components/TheNavbar/DropdownMenu.vue'
+
 export default {
     components: {
-        CogIcon,
+        DropwdownMenu,
+        HomeIcon,
+        ChatAltIcon,
+        StarIcon,
     },
     computed: {
         user() {
@@ -16,17 +22,15 @@ export default {
     <div class="TheNavbar">
         <div class="container">
             <div class="logo-container">
-                <nuxt-link to="/">Peroniagram</nuxt-link>
+                <nuxt-link to="/" class="block py-1">Peroniagram</nuxt-link>
             </div>
             <nav class="nav-menu">
-                <nuxt-link to="/settings">
-                    <CogIcon class="h-6 w-6" />
+                <nuxt-link to="/"><HomeIcon class="icon" /> </nuxt-link>
+                <nuxt-link to="/chat"><ChatAltIcon class="icon" /> </nuxt-link>
+                <nuxt-link to="/favorites"
+                    ><StarIcon class="icon" />
                 </nuxt-link>
-                <nuxt-link to="/my-profile">
-                    <div class="profile-img-wrap">
-                        <img :src="user.picture" />
-                    </div>
-                </nuxt-link>
+                <dropwdown-menu />
             </nav>
         </div>
     </div>
@@ -34,7 +38,7 @@ export default {
 
 <style scoped lang="scss">
 .TheNavbar {
-    @apply py-3 px-6 bg-blue-300;
+    @apply py-2 px-6 bg-blue-600;
 }
 
 .container {
@@ -42,26 +46,18 @@ export default {
 }
 
 .logo-container {
-    @apply text-xl;
-}
-
-.logo-container a {
-    @apply hover:opacity-80 transition-colors;
+    @apply text-xl text-white;
 }
 
 .nav-menu {
     @apply flex items-center justify-between;
 }
 
-.nav-menu a:not(:first-child) {
+.nav-menu > * {
     @apply ml-4;
 }
 
-.nav-menu a {
-    @apply block hover:opacity-80 transition-colors;
-}
-
-.profile-img-wrap {
-    @apply overflow-hidden w-6 h-6 rounded-full;
+.icon {
+    @apply h-5 w-5 text-white;
 }
 </style>

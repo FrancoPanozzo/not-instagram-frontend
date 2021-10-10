@@ -19,6 +19,6 @@ export default {}
 }
 
 .hero {
-    @apply bg-blue-800;
+    @apply bg-blue-600;
 }
 </style>

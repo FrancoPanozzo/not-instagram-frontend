@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <h1>Welcome to Peroniagram</h1>
-        <button class="btn" @click="login">Log in</button>
+        <t-button @click="login">Log in</t-button>
     </div>
 </template>
 
@@ -24,9 +24,5 @@ export default {
 
 h1 {
     @apply text-4xl mb-6;
-}
-
-.btn {
-    @apply bg-blue-700 text-blue-100 px-3 py-2 rounded-md shadow-md hover:bg-blue-900 transition-all;
 }
 </style>
