@@ -1,5 +1,10 @@
 <script>
-import { HomeIcon, ChatAltIcon, StarIcon } from '@vue-hero-icons/solid'
+import {
+    HomeIcon,
+    ChatAltIcon,
+    StarIcon,
+    PlusSmIcon,
+} from '@vue-hero-icons/solid'
 
 import DropwdownMenu from '@/components/TheNavbar/DropdownMenu.vue'
 
@@ -9,6 +14,7 @@ export default {
         HomeIcon,
         ChatAltIcon,
         StarIcon,
+        PlusSmIcon,
     },
     computed: {
         user() {
@@ -22,11 +28,16 @@ export default {
     <div class="TheNavbar">
         <div class="container">
             <div class="logo-container">
-                <nuxt-link to="/" class="block py-1">Peroniagram</nuxt-link>
+                <nuxt-link to="/" class="block py-1 select-none"
+                    >Peroniagram</nuxt-link
+                >
             </div>
             <nav class="nav-menu">
-                <nuxt-link to="/"><HomeIcon class="icon" /> </nuxt-link>
-                <nuxt-link to="/chat"><ChatAltIcon class="icon" /> </nuxt-link>
+                <nuxt-link to="/new-post"
+                    ><PlusSmIcon class="icon"
+                /></nuxt-link>
+                <nuxt-link to="/"><HomeIcon class="icon" /></nuxt-link>
+                <nuxt-link to="/chat"><ChatAltIcon class="icon" /></nuxt-link>
                 <nuxt-link to="/favorites"
                     ><StarIcon class="icon" />
                 </nuxt-link>

@@ -47,7 +47,7 @@ export default {
         <t-button to="/settings" variant="secondary">
             <CogIcon class="icon" /> <span>Settings</span>
         </t-button>
-        <hr class="block bg-black my-4" />
+        <div class="block bg-blue-600 h-px my-4"></div>
         <t-button variant="danger" @click="logout">
             <LogoutIcon class="icon" /> <span>Log out</span>
         </t-button>
@@ -60,6 +60,6 @@ export default {
 }
 
 .router-link-exact-active {
-    @apply text-blue-600 cursor-default;
+    @apply bg-blue-200 cursor-default;
 }
 </style>
