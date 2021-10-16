@@ -21,7 +21,7 @@ export default {
 
 <style scoped lang="scss">
 .app {
-    @apply flex flex-col min-h-screen;
+    @apply flex flex-col min-h-screen bg-blue-200 transition-colors dark:text-white dark:bg-blue-900;
 }
 
 .outer-container {
