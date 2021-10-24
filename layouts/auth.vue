@@ -3,22 +3,25 @@ export default {}
 </script>
 
 <template>
-    <div :class="{ 'dark-mode': true, 'app-outer-wrap': true }">
+    <div class="app">
         <div class="hero"></div>
-        <nuxt />
+        <nuxt class="form" />
     </div>
 </template>
 
 <style scoped lang="scss">
-.app-outer-wrap {
-    @apply flex min-h-screen;
+.app {
+    @apply flex min-h-screen bg-dark-bg-main text-dark-t-main;
 }
 
-.app-outer-wrap > * {
+.app > * {
     @apply flex-1;
 }
 
 .hero {
-    @apply bg-blue-600;
+}
+
+.form {
+    @apply bg-dark-bg-card;
 }
 </style>

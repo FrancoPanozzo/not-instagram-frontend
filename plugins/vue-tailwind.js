@@ -16,13 +16,13 @@ const components = {
             fixedClasses:
                 'flex items-center justify-center px-4 py-2 transition duration-100 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed rounded',
             classes:
-                'text-white bg-blue-500 border border-transparent shadow-sm hover:bg-blue-600',
+                'text-dark-t-main bg-highlight border border-transparent shadow-sm hover:bg-highlight-hov',
             variants: {
-                secondary:
-                    'text-blue-600 bg-blue-100 border border-blue-600 shadow-sm hover:bg-blue-100',
-                danger: 'text-white bg-red-500 border border-transparent shadow-sm hover:bg-red-600',
+                text: 'text-light-t-main dark:text-dark-t-main px-0 py-0',
                 success:
                     'text-white bg-green-500 border border-transparent shadow-sm hover:bg-green-600',
+                secondary:
+                    'bg-transparent border border-light-border dark:border-dark-border text-light-t-main dark:text-dark-t-main',
             },
         },
     },
@@ -59,11 +59,11 @@ const components = {
         component: TDropdown,
         props: {
             classes: {
-                button: 'block px-4 py-2 text-white transition duration-100 ease-in-out bg-blue-500 border border-transparent rounded shadow-sm hover:bg-blue-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed',
+                button: 'block px-4 py-2 text-light-t-main dark:text-dark-t-main transition duration-100 ease-in-out bg-dark-bg-card border border-transparent rounded shadow-sm hover:bg-blue-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed',
                 wrapper: 'inline-flex flex-col',
                 dropdownWrapper: 'relative z-10',
                 dropdown:
-                    'origin-top-left absolute -right-3 w-56 rounded shadow bg-blue-200 mt-2 p-4 flex flex-col',
+                    'origin-top-left absolute -right-3 w-56 rounded shadow bg-light-bg-main dark:bg-dark-bg-card mt-2 p-4 flex flex-col',
                 enterClass: 'opacity-0 scale-95',
                 enterActiveClass: 'transition transform ease-out duration-100',
                 enterToClass: 'opacity-100 scale-100',
@@ -93,14 +93,14 @@ const components = {
             },
             classes: {
                 wrapper:
-                    'bg-gray-100 rounded-full border-2 border-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50',
-                wrapperChecked: 'bg-blue-500 rounded-full',
+                    'bg-gray-100 rounded-full border-2 border-transparent focus:outline-none',
+                wrapperChecked: 'bg-highlight rounded-full',
                 wrapperDisabled:
-                    'bg-gray-100 rounded-full border-2 border-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50',
+                    'bg-gray-100 rounded-full border-2 border-transparent focus:outline-none',
                 wrapperCheckedDisabled: 'bg-blue-500',
                 button: 'h-5 w-5 rounded-full bg-white shadow flex items-center justify-center text-gray-400 text-xs',
                 buttonChecked:
-                    'h-5 w-5 rounded-full bg-white shadow flex items-center justify-center text-blue-500 text-xs',
+                    'h-5 w-5 rounded-full bg-white shadow flex items-center justify-center text-highlight text-xs',
                 checkedPlaceholder:
                     'rounded-full w-5 h-5 flex items-center justify-center text-gray-400 text-xs',
                 uncheckedPlaceholder:

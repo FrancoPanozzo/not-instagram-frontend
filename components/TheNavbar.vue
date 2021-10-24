@@ -33,12 +33,16 @@ export default {
                 >
             </div>
             <nav class="nav-menu">
-                <nuxt-link to="/new-post"
+                <nuxt-link to="/new-post" class="link"
                     ><PlusSmIcon class="icon"
                 /></nuxt-link>
-                <nuxt-link to="/"><HomeIcon class="icon" /></nuxt-link>
-                <nuxt-link to="/chat"><ChatAltIcon class="icon" /></nuxt-link>
-                <nuxt-link to="/favorites"
+                <nuxt-link to="/" class="link"
+                    ><HomeIcon class="icon"
+                /></nuxt-link>
+                <nuxt-link to="/chat" class="link"
+                    ><ChatAltIcon class="icon"
+                /></nuxt-link>
+                <nuxt-link to="/favorites" class="link"
                     ><StarIcon class="icon" />
                 </nuxt-link>
                 <dropwdown-menu />
@@ -49,7 +53,7 @@ export default {
 
 <style scoped lang="scss">
 .TheNavbar {
-    @apply py-2 px-6 bg-blue-600;
+    @apply py-2 px-6 border-b border-light-border dark:border-dark-border;
 }
 
 .container {
@@ -57,7 +61,7 @@ export default {
 }
 
 .logo-container {
-    @apply text-xl text-white;
+    @apply text-xl text-light-t-main dark:text-dark-t-main;
 }
 
 .nav-menu {
@@ -69,6 +73,14 @@ export default {
 }
 
 .icon {
-    @apply h-5 w-5 text-white;
+    @apply h-5 w-5;
+}
+
+.link {
+    @apply text-light-t-main dark:text-dark-t-main;
+}
+
+.link.nuxt-link-exact-active {
+    @apply text-highlight cursor-default;
 }
 </style>

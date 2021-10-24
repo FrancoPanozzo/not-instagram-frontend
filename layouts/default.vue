@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-    <div :class="{ 'dark-mode': true, app: true }">
+    <div class="app">
         <the-navbar />
         <div class="outer-container">
             <div class="inner-container">
@@ -21,7 +21,7 @@ export default {
 
 <style scoped lang="scss">
 .app {
-    @apply flex flex-col min-h-screen bg-blue-200 transition-colors dark:text-white dark:bg-blue-900;
+    @apply flex flex-col min-h-screen text-light-t-main bg-light-bg-main transition-colors dark:text-dark-t-main dark:bg-dark-bg-main;
 }
 
 .outer-container {
