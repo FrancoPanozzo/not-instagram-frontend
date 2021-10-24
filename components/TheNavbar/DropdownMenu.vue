@@ -39,7 +39,7 @@ export default {
             @blur="blurHandler"
             @keydown="keydownHandler"
         >
-            <img :src="user.picture" />
+            <img class="select-none" :src="user.picture" />
         </div>
         <t-button to="/my-profile" variant="secondary" class="mb-2">
             <UserIcon class="icon" /> <span>Profile</span>
@@ -50,7 +50,7 @@ export default {
         <div class="block bg-light-border dark:bg-dark-border h-px my-4"></div>
         <t-button
             variant="text"
-            class="hover:text-red-500 mx-auto"
+            class="hover:text-highlight dark:hover:text-highlight mx-auto"
             @click="logout"
         >
             <LogoutIcon class="icon" /> <span>Log out</span>
