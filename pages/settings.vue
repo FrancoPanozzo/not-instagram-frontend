@@ -5,18 +5,17 @@ export default {
         MoonIcon,
         SunIcon,
     },
-    data() {
-        return {
-            isDarkMode: false,
-        }
+    computed: {
+        isDarkMode() {
+            return this.$store.state.UI.theme === 'dark'
+        },
     },
-    watch: {
-        isDarkMode(val) {
-            if (val) {
-                document.documentElement.classList.add('dark')
-            } else {
-                document.documentElement.classList.remove('dark')
-            }
+    methods: {
+        toggleTheme() {
+            this.$store.dispatch(
+                'UI/setTheme',
+                this.isDarkMode ? 'light' : 'dark'
+            )
         },
     },
 }
@@ -25,7 +24,11 @@ export default {
 <template>
     <div>
         <div class="flex align-center">
-            <t-toggle name="dark-mode-toggle" v-model="isDarkMode" checked>
+            <t-toggle
+                name="dark-mode-toggle"
+                @change="toggleTheme"
+                :checked="isDarkMode"
+            >
                 <template slot="default" slot-scope="{ isChecked }">
                     <span
                         class="
