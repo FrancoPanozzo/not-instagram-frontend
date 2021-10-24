@@ -7,6 +7,8 @@ export default {
         title: 'Peroniagram',
         htmlAttrs: {
             lang: 'en',
+            // Dark tailwind theme by default
+            class: 'dark',
         },
         meta: [
             { charset: 'utf-8' },
@@ -14,7 +16,11 @@ export default {
                 name: 'viewport',
                 content: 'width=device-width, initial-scale=1',
             },
-            { hid: 'description', name: 'description', content: '' },
+            {
+                hid: 'description',
+                name: 'description',
+                content: 'Peroniagram: Instagram popular Xd',
+            },
             { name: 'format-detection', content: 'telephone=no' },
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],

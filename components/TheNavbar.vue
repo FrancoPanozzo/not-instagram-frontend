@@ -36,9 +36,6 @@ export default {
                 <nuxt-link to="/new-post" class="link"
                     ><PlusSmIcon class="icon"
                 /></nuxt-link>
-                <nuxt-link to="/" class="link"
-                    ><HomeIcon class="icon"
-                /></nuxt-link>
                 <nuxt-link to="/chat" class="link"
                     ><ChatAltIcon class="icon"
                 /></nuxt-link>

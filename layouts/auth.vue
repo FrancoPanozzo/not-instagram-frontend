@@ -11,7 +11,7 @@ export default {}
 
 <style scoped lang="scss">
 .app {
-    @apply flex min-h-screen bg-dark-bg-main text-dark-t-main;
+    @apply flex min-h-screen bg-light-bg-card text-light-t-main dark:bg-dark-bg-main dark:text-dark-t-main;
 }
 
 .app > * {
@@ -22,6 +22,6 @@ export default {}
 }
 
 .form {
-    @apply bg-dark-bg-card;
+    @apply bg-light-bg-main dark:bg-dark-bg-card;
 }
 </style>
