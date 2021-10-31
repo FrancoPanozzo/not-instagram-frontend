@@ -30,7 +30,7 @@ export default {
     css: [],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-    plugins: ['@plugins/vue-tailwind'],
+    plugins: ['@plugins/vue-tailwind.js', '@plugins/api.js'],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
@@ -63,7 +63,13 @@ export default {
     },
 
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
-    axios: {},
+    axios: {
+        https: true,
+        baseURL: process.env.API_BASE_URL,
+        browserBaseURL: process.env.API_BASE_URL,
+        debug: false,
+        json: true,
+    },
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
