@@ -33,6 +33,7 @@ export default {
                 >
             </div>
             <nav class="nav-menu">
+                <nuxt-link to="/test">Test</nuxt-link>
                 <nuxt-link to="/new-post" class="link"
                     ><PlusSmIcon class="icon"
                 /></nuxt-link>
