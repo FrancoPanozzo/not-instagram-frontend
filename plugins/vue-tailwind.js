@@ -6,6 +6,8 @@ import {
     TAlert,
     TDropdown,
     TToggle,
+    TInput,
+    TTextarea,
 } from 'vue-tailwind/dist/components'
 
 const components = {
@@ -105,6 +107,34 @@ const components = {
                     'rounded-full w-5 h-5 flex items-center justify-center text-gray-400 text-xs',
                 uncheckedPlaceholder:
                     'rounded-full w-5 h-5 flex items-center justify-center text-gray-400 text-xs',
+            },
+        },
+    },
+    't-input': {
+        component: TInput,
+        props: {
+            fixedClasses:
+                'block w-full px-3 py-2 transition duration-100 ease-in-out border  shadow-sm focus:ring-2 focus:ring-highlight focus:outline-none focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed',
+            classes:
+                'text-light-t-main dark:text-dark-t-main placeholder-light-t-muted dark:placeholder-dark-t-muted bg-light-bg-main dark:bg-dark-bg-main border-light-border dark:border-dark-border focus:border-highlight',
+            variants: {
+                danger: 'border-red-300 bg-red-50 placeholder-red-200 text-red-900',
+                success:
+                    'border-green-300 bg-green-50 placeholder-gray-400 text-green-900',
+            },
+        },
+    },
+    't-textarea': {
+        component: TTextarea,
+        props: {
+            fixedClasses:
+                'block w-full px-3 py-2 transition duration-100 ease-in-out border  shadow-sm focus:ring-2 focus:ring-highlight focus:outline-none focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed',
+            classes:
+                'text-light-t-main dark:text-dark-t-main placeholder-light-t-muted dark:placeholder-dark-t-muted bg-light-bg-main dark:bg-dark-bg-main border-light-border dark:border-dark-border focus:border-highlight',
+            variants: {
+                danger: 'border-red-300 bg-red-50 placeholder-red-200 text-red-900',
+                success:
+                    'border-green-300 bg-green-50 placeholder-gray-400 text-green-900',
             },
         },
     },
