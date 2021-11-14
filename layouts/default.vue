@@ -49,10 +49,10 @@ export default {
 }
 
 .outer-container {
-    @apply flex-1 p-6;
+    @apply flex-1 p-6 flex;
 }
 
 .inner-container {
-    @apply max-w-screen-xl  mx-auto w-full;
+    @apply max-w-screen-xl  mx-auto w-full flex-1 flex-shrink-0;
 }
 </style>
