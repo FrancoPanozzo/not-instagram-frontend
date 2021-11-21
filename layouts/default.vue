@@ -13,7 +13,7 @@ export default {
             try {
                 const user = this.$auth.user
 
-                // When logging in try to save the user (won't save if it's not new)
+                // When logging in try to save the user...
                 const res = await this.$api.post('users', {
                     ...user,
                     first_name: user.given_name || '',
@@ -24,6 +24,13 @@ export default {
                     DOB: new Date(),
                     ui_theme: this.$store.state.UI.theme || 'light',
                 })
+
+                // ... and store it using VUEX
+                if (res.status === 200) {
+                    this.$store.dispatch('user/setUser', res.data)
+                } else {
+                    throw res
+                }
             } catch (error) {
                 console.log(error)
             }
