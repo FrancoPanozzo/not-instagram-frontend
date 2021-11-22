@@ -3,25 +3,25 @@ export default {}
 </script>
 
 <template>
-    <div class="app">
-        <div class="hero"></div>
-        <nuxt class="form" />
+    <div class="auth-layout__app">
+        <div class="auth-layout__hero"></div>
+        <nuxt class="auth-layout__form" />
     </div>
 </template>
 
-<style scoped lang="scss">
-.app {
+<style lang="scss">
+.auth-layout__app {
     @apply flex min-h-screen bg-light-bg-card text-light-t-main dark:bg-dark-bg-main dark:text-dark-t-main;
 }
 
-.app > * {
+.auth-layout__app > * {
     @apply flex-1;
 }
 
-.hero {
+.auth-layout__hero {
 }
 
-.form {
+.auth-layout__form {
     @apply bg-light-bg-main dark:bg-dark-bg-card;
 }
 </style>

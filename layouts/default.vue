@@ -40,26 +40,30 @@ export default {
 </script>
 
 <template>
-    <div class="app">
+    <div class="default-layout__app">
         <the-navbar />
-        <div class="outer-container">
-            <div class="inner-container">
+        <div class="default-layout__outer-container">
+            <div class="default-layout__inner-container">
                 <nuxt />
             </div>
         </div>
     </div>
 </template>
 
-<style scoped lang="scss">
-.app {
-    @apply flex flex-col min-h-screen text-light-t-main bg-light-bg-main transition-colors dark:text-dark-t-main dark:bg-dark-bg-main;
+<style lang="scss">
+body {
+    @apply text-light-t-main bg-light-bg-main transition-colors dark:text-dark-t-main dark:bg-dark-bg-main;
 }
 
-.outer-container {
+.default-layout__app {
+    @apply flex flex-col min-h-screen;
+}
+
+.default-layout__outer-container {
     @apply flex-1 p-6 flex;
 }
 
-.inner-container {
+.default-layout__inner-container {
     @apply max-w-screen-xl  mx-auto w-full flex-1 flex-shrink-0;
 }
 </style>
